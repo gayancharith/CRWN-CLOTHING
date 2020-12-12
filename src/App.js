@@ -4,6 +4,7 @@ import { Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import Homepage from "./pages/homepage/homepage.component";
 import Shoppage from "./pages/shop/shop.component";
+import Header from "./components/header/header.component";
 
 const TopicsList = () => (
   <div>
@@ -23,6 +24,7 @@ const TopicDetails = (props) => {
 function App() {
   return (
     <div>
+      <Header />
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/topics" component={TopicsList} />
