@@ -3,12 +3,7 @@ import { Switch, Route, Link } from "react-router-dom";
 
 import "./App.css";
 import Homepage from "./pages/homepage/homepage.component";
-
-const HatsDetails = () => (
-  <div>
-    <h1>Hats Page</h1>
-  </div>
-);
+import Shoppage from "./pages/shop/shop.component";
 
 const TopicsList = () => (
   <div>
@@ -32,7 +27,7 @@ function App() {
         <Route exact path="/" component={Homepage} />
         <Route exact path="/topics" component={TopicsList} />
         <Route path="/topics/:topicId" component={TopicDetails} />
-        <Route path="/hats" component={HatsDetails} />
+        <Route path="/shop" component={Shoppage} />
       </Switch>
     </div>
   );
