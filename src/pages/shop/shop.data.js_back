@@ -1,0 +1,230 @@
+import image1 from "../../images/1.jpg";
+import image2 from "../../images/2.jpg";
+import image3 from "../../images/3.jpg";
+import image4 from "../../images/4.jpg";
+import image5 from "../../images/5.jpg";
+
+const SHOP_DATA = [
+  {
+    title: "hats",
+    routeName: "hats",
+    imageUrl: image1,
+    id: 1,
+    items: [
+      {
+        id: 11,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 12,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 13,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 14,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 15,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 16,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+    ],
+  },
+  {
+    title: "sneakers",
+    routeName: "hats",
+    imageUrl: image1,
+    id: 2,
+    items: [
+      {
+        id: 21,
+        name: "Brown Brim",
+        imageUrl: image2,
+        price: 25,
+      },
+      {
+        id: 22,
+        name: "Brown Brim",
+        imageUrl: image2,
+        price: 25,
+      },
+      {
+        id: 23,
+        name: "Brown Brim",
+        imageUrl: image2,
+        price: 25,
+      },
+      {
+        id: 24,
+        name: "Brown Brim",
+        imageUrl: image2,
+        price: 25,
+      },
+      {
+        id: 25,
+        name: "Brown Brim",
+        imageUrl: image2,
+        price: 25,
+      },
+      {
+        id: 26,
+        name: "Brown Brim",
+        imageUrl: image2,
+        price: 25,
+      },
+    ],
+  },
+  {
+    title: "jackets",
+    routeName: "hats",
+    imageUrl: image1,
+    id: 3,
+    items: [
+      {
+        id: 31,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 32,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 33,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 34,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 35,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 36,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+    ],
+  },
+  {
+    title: "women",
+    routeName: "hats",
+    imageUrl: image1,
+    id: 4,
+    items: [
+      {
+        id: 41,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 42,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 43,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 44,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 45,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 46,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+    ],
+  },
+  {
+    title: "men",
+    routeName: "hats",
+    imageUrl: image1,
+    id: 5,
+    items: [
+      {
+        id: 51,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 52,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 53,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 54,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 55,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+      {
+        id: 56,
+        name: "Brown Brim",
+        imageUrl: image1,
+        price: 25,
+      },
+    ],
+  },
+];
+
+export default SHOP_DATA;
