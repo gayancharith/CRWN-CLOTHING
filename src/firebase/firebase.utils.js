@@ -25,7 +25,6 @@ provider.setCustomParameters({
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
-  console.log("hello >>>");
   if (!userAuth) return;
 
   const userRef = firestore.doc(`users/${userAuth.uid}`);
