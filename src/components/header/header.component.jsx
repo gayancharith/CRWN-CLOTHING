@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
@@ -11,34 +10,33 @@ import { selectCurrentUser } from "../../redux/user/user.selectors";
 
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 
-import "./header.styles.scss";
+import {
+  HeaderContainer,
+  LogoContainer,
+  OptionsContainer,
+  OptionLink,
+} from "./header.styles";
 
 const Header = ({ currentUser, hidden }) => (
-  <div className="header">
-    <Link className="logo-container" to="/">
+  <HeaderContainer>
+    <LogoContainer to="/">
       <Logo className="logo" />
-    </Link>
+    </LogoContainer>
 
-    <div className="options">
-      <Link className="option" to="/shop">
-        shop
-      </Link>
-      <Link className="option" to="/shop">
-        contact
-      </Link>
+    <OptionsContainer>
+      <OptionLink to="/shop">shop</OptionLink>
+      <OptionLink to="/shop">contact</OptionLink>
       {currentUser ? (
-        <div className="option" onClick={() => auth.signOut()}>
+        <OptionLink as="div" onClick={() => auth.signOut()}>
           sign out
-        </div>
+        </OptionLink>
       ) : (
-        <Link className="option" to="/signin">
-          sign in
-        </Link>
+        <OptionLink to="/signin">sign in</OptionLink>
       )}
       <CartIcon />
-    </div>
+    </OptionsContainer>
     {!hidden && <CartDropdown />}
-  </div>
+  </HeaderContainer>
 );
 
 // const mapStateToProps = (state) => ({
