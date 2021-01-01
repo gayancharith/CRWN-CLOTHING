@@ -8,12 +8,14 @@ import {
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import "./App.css";
 import Homepage from "./pages/homepage/homepage.component";
 import Shoppage from "./pages/shop/shop.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
-
 import Header from "./components/header/header.component";
+
+import GlobalStyle from "./global.styles";
+// import "./App.css";
+
 import SignInAndSignUpPage from "./pages/sign-in-sign-up/sign-in-sign-up.component";
 import { checkUserSession } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
@@ -68,6 +70,7 @@ const App = ({ checkUserSession, currentUser }) => {
 
   return (
     <div>
+      <GlobalStyle />
       <Header />
       <Switch>
         <Route exact path="/" component={Homepage} />
