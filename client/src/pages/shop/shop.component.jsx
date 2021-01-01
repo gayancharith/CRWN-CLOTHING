@@ -1,15 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, lazy, Suspense } from "react";
 import { connect } from "react-redux";
 import { Route } from "react-router-dom";
 
 import { fetchCollectionsStart } from "../../redux/shop/shop.actions";
-import CollectionOverViewContainer from "../../components/collection-overview/collection-overview.container";
-import CollectionPageContainer from "../collection/collection.container";
 
 import "../../components/preview-collection/preview-collection.styles.scss";
+import Spinner from "../../components/spinner/spinner.component";
 
 // const CollectionsOverviewWithSpinner = WithSpinner(CollectionOverView);
 // const CollectionsPageWithSpinner = WithSpinner(CollectionPage);
+
+const CollectionOverViewContainer = lazy(() =>
+  import("../../components/collection-overview/collection-overview.container")
+);
+const CollectionPageContainer = lazy(() =>
+  import("../collection/collection.container")
+);
 
 const ShopPage = ({ fetchCollectionsStart, match }) => {
   useEffect(() => {
@@ -43,21 +49,23 @@ const ShopPage = ({ fetchCollectionsStart, match }) => {
   // }
   return (
     <div className="shop-page">
-      <Route
-        exact
-        path={`${match.path}`}
-        // render={(props) => (
-        //   <CollectionsOverviewWithSpinner
-        //     isLoading={iscollectionFetching}
-        //     {...props}
-        //   />
-        // )}
-        component={CollectionOverViewContainer}
-      />
-      <Route
-        path={`${match.path}/:collectionId`}
-        component={CollectionPageContainer}
-      />
+      <Suspense fallback={<Spinner />}>
+        <Route
+          exact
+          path={`${match.path}`}
+          // render={(props) => (
+          //   <CollectionsOverviewWithSpinner
+          //     isLoading={iscollectionFetching}
+          //     {...props}
+          //   />
+          // )}
+          component={CollectionOverViewContainer}
+        />
+        <Route
+          path={`${match.path}/:collectionId`}
+          component={CollectionPageContainer}
+        />
+      </Suspense>
     </div>
   );
 };
