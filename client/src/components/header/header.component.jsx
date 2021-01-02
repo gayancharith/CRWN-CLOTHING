@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import { auth } from "../../firebase/firebase.utils";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
@@ -39,11 +38,6 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
     {!hidden && <CartDropdown />}
   </HeaderContainer>
 );
-
-// const mapStateToProps = (state) => ({
-//   currentUser: selectCurrentUser(state),
-//   hidden: selectCartHidden(state),
-// });
 
 const mapDispatchToProps = (dispatch) => ({
   signOutStart: () => dispatch(signOutStart()),

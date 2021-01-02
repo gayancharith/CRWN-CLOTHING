@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 
-import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 import {
   googleSignInStart,
   emailSignInStart,
@@ -23,13 +22,6 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
     event.preventDefault();
 
     emailSignInStart(email, password);
-
-    // try {
-    //   await auth.signInWithEmailAndPassword(email, password);
-    //   this.setState({ email: "", password: "" });
-    // } catch (error) {
-    //   console.log(error);
-    // }
   };
 
   const handleChange = (event) => {
