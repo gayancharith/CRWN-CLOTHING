@@ -22,6 +22,7 @@ export const LogoContainer = styled(Link)`
 
   @media screen and (max-width: 800px) {
     width: 50px;
+    padding: 0;
   }
 `;
 
